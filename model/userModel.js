@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import bcrypt, { compare } from "bcrypt";
+import bcrypt from "bcryptjs";
 import crypto from "crypto";
 
 // Declare the Schema of the Mongo model
@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema(
       required: true,
     },
     lastname: {
-      type: String,
+      type: String,  
       required: true,
     },
     email: {
